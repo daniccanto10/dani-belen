@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dani ❤️ Belén</title>
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+    font-family:Arial,sans-serif;
+
+    background-image:url("fondo.jpeg");
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+    background-attachment:fixed;
+
+    overflow-x:hidden;
+    text-align:center;
+}
+body::before{
+    content:"";
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,0.35);
+    z-index:-1;
+}
+
+#inicio{
+position:fixed;
+inset:0;
+background:#111;
+display:flex;
+justify-content:center;
+align-items:center;
+z-index:9999;
+}
+
+#sobre{
+position:relative;
+width:320px;
+height:220px;
+cursor:pointer;
+}
+
+.cuerpo{
+position:absolute;
+width:320px;
+height:220px;
+background:#ff4d6d;
+border-radius:10px;
+}
+
+.tapa{
+position:absolute;
+width:320px;
+height:160px;
+background:#ff8fab;
+clip-path:polygon(0 0,100% 0,50% 100%);
+transform-origin:top;
+transition:1.5s;
+z-index:2;
+}
+
+.mensajeSobre{
+position:absolute;
+top:90px;
+width:100%;
+font-size:28px;
+color:white;
+}
+
+h1{
+    margin-top:20px;
+    font-size:50px;
+    color:white;
+
+    text-shadow:
+    0 0 10px white,
+    0 0 20px pink,
+    0 0 40px hotpink,
+    0 0 60px deeppink;
+}
+
+#contador{
+font-size:28px;
+color:white;
+margin:20px;
+}
+
+.contenedor{
+width:95%;
+margin:30px auto;
+display:flex;
+gap:30px;
+align-items:center;
+}
+
+.carta{
+    flex:1;
+    background:rgba(255,255,255,0.92);
+    backdrop-filter:blur(10px);
+    padding:30px;
+    border-radius:25px;
+    text-align:left;
+
+    box-shadow:
+    0 0 20px rgba(255,255,255,.7),
+    0 0 40px rgba(255,105,180,.4);
+
+    border:2px solid rgba(255,255,255,.4);
+}
+
+.carta h2{
+text-align:center;
+color:#d63384;
+margin-bottom:20px;
+}
+
+.carta p{
+font-size:21px;
+line-height:1.8;
+}
+
+.fotoPrincipal{
+flex:1;
+}
+
+.fotoPrincipal img{
+width:100%;
+max-width:500px;
+height:650px;
+object-fit:cover;
+border-radius:25px;
+border:4px solid white;
+box-shadow:0 0 20px white,0 0 40px pink;
+}
+
+.btn{
+padding:15px 30px;
+border:none;
+border-radius:10px;
+background:#ff4d6d;
+color:white;
+font-size:20px;
+cursor:pointer;
+margin:20px;
+}
+
+#mensaje{
+font-size:28px;
+color:white;
+font-weight:bold;
+margin-bottom:20px;
+}
+
+.seccion{
+margin-top:40px;
+color:white;
+}
+
+.galeria-fotos,
+.galeria-videos{
+width:95%;
+margin:20px auto;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:15px;
+}
+
+.galeria-fotos img{
+width:100%;
+height:280px;
+object-fit:cover;
+border-radius:20px;
+box-shadow:0 0 15px pink;
+}
+
+.galeria-videos video{
+width:100%;
+height:280px;
+object-fit:cover;
+border-radius:20px;
+box-shadow:0 0 15px hotpink;
+}
+
+.corazon,
+.petalo,
+.fuego{
+position:fixed;
+pointer-events:none;
+}
+
+footer{
+margin:40px;
+font-size:22px;
+color:white;
+}
+
+@media(max-width:900px){
+
+.contenedor{
+flex-direction:column;
+}
+
+.fotoPrincipal img{
+height:420px;
+}
+
+.carta p{
+font-size:18px;
+}
+
+h1{
+font-size:35px;
+}
+
+#contador{
+font-size:22px;
+}
+
+}
+</style>
+</head>
+
+<body>
+
+<div id="inicio">
+<div id="sobre" onclick="abrirCarta()">
+<div class="tapa"></div>
+<div class="cuerpo"></div>
+<div class="mensajeSobre">💌 Para Belén 💌</div>
+</div>
+</div>
+
+<audio id="musica" loop>
+<source src="Yoko.mp3" type="audio/mpeg">
+</audio>
+
+<h1>❤️ Dani & Belen ❤️</h1>
+
+<div id="contador"></div>
+
+<div class="contenedor">
+
+<div class="carta">
+
+<h2>💌 Carta para Belen 💌</h2>
+
+<p>
+Mi querida Payasita:
+
+Desde que te conoci, cada día es más especial.
+Tu risita ilumina mis momentos, tu cariño me da fuerzas
+y tu compañía hace que todo sea mejor.
+
+Gracias por cada recuerdo, cada conversación y cada momento
+que compartimos juntos.
+
+Te quiero muchísimo y espero seguir conociendote cada dia más,
+ya muy pronto nos veremos Payasita.
+<br>
+Belén, quizás todavía estemos escribiendo las primeras líneas de nuestra historia
+pero hay algo que ya sé: conocerte ha sido uno de los capítulos más hermosos
+que la vida ha querido regalarme.
+
+<br>
+❤️ Con todo el cariño, Dani Mateo Halck ❤️
+</p>
+
+</div>
+
+<div class="fotoPrincipal">
+<img src="d1.jpeg">
+</div>
+
+</div>
+
+<button class="btn" onclick="mensajeRomantico()">
+💕 Mensaje Especial 💕
+</button>
+
+<div id="mensaje"></div>
+
+<div class="seccion">
+<h2>📸 Mi Belén Hermosa ❤️</h2>
+</div>
+
+<div class="galeria-fotos">
+<img src="d2.jpeg">
+<img src="d3.jpeg">
+<img src="d4.jpeg">
+<img src="d5.jpeg">
+<img src="d6.jpeg">
+</div>
+
+<div class="seccion">
+<h2>🎥 Tus Videos Payasita ❤️</h2>
+</div>
+
+<div class="galeria-videos">
+
+<video autoplay muted loop playsinline>
+<source src="video1.mp4" type="video/mp4">
+</video>
+
+<video autoplay muted loop playsinline>
+<source src="video2.mp4" type="video/mp4">
+</video>
+
+<video autoplay muted loop playsinline>
+<source src="video3.mp4" type="video/mp4">
+</video>
+
+<video autoplay muted loop playsinline>
+<source src="video4.mp4" type="video/mp4">
+</video>
+
+<video autoplay muted loop playsinline>
+<source src="video5.mp4" type="video/mp4">
+</video>
+
+</div>
+
+<footer>
+❤️ Ya luego nos toca nuestras fotos Payasita ❤️
+</footer>
+
+<script>
+
+function abrirCarta(){
+
+document.querySelector(".tapa").style.transform =
+"rotateX(180deg)";
+
+setTimeout(()=>{
+
+document.getElementById("inicio").style.display="none";
+
+document.getElementById("musica").play();
+
+lanzarFuegos();
+
+},1500);
+
+}
+
+function lanzarFuegos(){
+
+for(let i=0;i<250;i++){
+
+let f=document.createElement("div");
+
+f.className="fuego";
+
+f.style.width="8px";
+f.style.height="8px";
+f.style.borderRadius="50%";
+
+f.style.left="50vw";
+f.style.top="50vh";
+
+f.style.background=
+`hsl(${Math.random()*360},100%,50%)`;
+
+document.body.appendChild(f);
+
+let x=(Math.random()-0.5)*1000;
+let y=(Math.random()-0.5)*1000;
+
+f.animate([
+{transform:"translate(0,0)",opacity:1},
+{transform:`translate(${x}px,${y}px)`,opacity:0}
+],{
+duration:2500
+});
+
+setTimeout(()=>f.remove(),2500);
+
+}
+
+}
+
+const inicio=new Date("2026-05-03");
+
+function actualizarContador(){
+
+const hoy=new Date();
+
+const dias=Math.floor(
+(hoy-inicio)/86400000
+);
+
+document.getElementById("contador").innerHTML=
+"💕 "+dias+" días que nos conocemos 💕";
+
+}
+
+setInterval(actualizarContador,1000);
+actualizarContador();
+
+function mensajeRomantico(){
+
+const mensajes=[
+"❤️ Eres lo mejor que me ha pasado ❤️",
+"🌹 Gracias por existir Belén 🌹",
+"💕 Cada día te quiero más 💕",
+"🥰 Eres muy especial para mi payasita 🥰",
+"💖 Tu risita me encanta 💖",
+"😍 Eres mi felicidad 😍",
+"❤️ Siempre te elegiría a ti payasita ❤️"
+];
+
+document.getElementById("mensaje").innerHTML=
+mensajes[Math.floor(Math.random()*mensajes.length)];
+
+}
+
+setInterval(()=>{
+
+let c=document.createElement("div");
+
+c.className="corazon";
+
+c.innerHTML="❤️";
+
+c.style.left=Math.random()*100+"vw";
+c.style.bottom="-20px";
+c.style.fontSize=(20+Math.random()*40)+"px";
+
+document.body.appendChild(c);
+
+c.animate([
+{transform:"translateY(0)"},
+{transform:"translateY(-120vh)",opacity:0}
+],{
+duration:7000
+});
+
+setTimeout(()=>c.remove(),7000);
+
+},300);
+
+setInterval(()=>{
+
+let p=document.createElement("div");
+
+p.className="petalo";
+
+p.innerHTML="🌹";
+
+p.style.left=Math.random()*100+"vw";
+p.style.top="-20px";
+
+document.body.appendChild(p);
+
+p.animate([
+{transform:"translateY(0)"},
+{transform:"translateY(120vh)"}
+],{
+duration:8000
+});
+
+setTimeout(()=>p.remove(),8000);
+
+},1200);
+
+</script>
+
+</body>
+</html>
